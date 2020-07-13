@@ -1,5 +1,8 @@
+/* 
+https://www.codewars.com/kata/5679aa472b8f57fb8c000047
+*/
+
 function findEvenIndex(arr) {
-    if (sum(arr) == 0) return 0;
     for (let i = 0; i < arr.length; i++) {
         var left = sum(arr.slice(0, i));
         var right = sum(arr.slice(i + 1));
@@ -11,5 +14,3 @@ function findEvenIndex(arr) {
 function sum(arr) {
     return arr.reduce((sum, index) => sum + index, 0)
 }
-
-console.log(findEvenIndex([20, 10, -80, 10, 10, 15, 35]))
