@@ -1,14 +1,5 @@
-const catchSignChange = input => {
+function inAscOrder(arr) {
+    return arr.every((_, index) => index == 0 || arr[index] > arr[index - 1])
+}
 
-    var result = 0;
-    for (let i = 0; i < input.length - 1; i++) {
-        if (input[i] == 0) input[i] = 1;
-        if (Math.sign(input[i]) != Math.sign(input[i + 1])) {
-            result++;
-            i++;
-        };
-    }
-    return result
-};
-
-console.log((catchSignChange([-7, -7, 7, 0])))
+console.log(inAscOrder([1, 2, 3, 4]))
