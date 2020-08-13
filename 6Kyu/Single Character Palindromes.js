@@ -1,3 +1,11 @@
+/* 
+https://www.codewars.com/kata/5a2c22271f7f709eaa0005d3/javascript
+
+solve("abba") = "OK". -- This is a palindrome
+solve("abbaa") = "remove one". -- remove the 'a' at the extreme right. 
+solve("abbaab") = "not possible". 
+*/
+
 function solve(s) {
     if (palindrome(s)) return 'OK';
     else {
@@ -15,5 +23,3 @@ function palindrome(s) {
     }
     return true;
 }
-
-console.log(solve("abbaac"))
