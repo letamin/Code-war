@@ -1,3 +1,14 @@
+/* 
+https://www.codewars.com/kata/5ebd53ea50d0680031190b96/javascript
+
+ 1  -->  "bir"
+13  -->  "on üç"
+27  -->  "yirmi yedi"
+38  -->  "otuz sekiz"
+77  -->  "yetmiş yedi"
+94  -->  "doksan dört"
+*/
+
 const getTurkishNumber = (num) => {
     let nums = {
         0: 'sıfır',
@@ -26,5 +37,3 @@ const getTurkishNumber = (num) => {
         return nums[num.toString().split('')[0] + '0'] + ' ' + nums[num.toString().split('')[1]]
     }
 }
-
-console.log(getTurkishNumber(16))
