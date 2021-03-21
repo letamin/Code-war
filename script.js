@@ -1,15 +1,11 @@
-function solution(number) {
-    // convert the number to a roman numeral
-    var roman = { M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1 }
-
-    var ans = '';
-    while (number > 0) {
-        for (a in roman) {
-            if (roman[a] <= number) { ans += a; number -= roman[a]; break; }
-
-        }
+function arrange(arr) {
+    const sorted = (w) => {
+        if (w.slice(-2) === 'KG') return w.slice(0, -2) * 1
+        else if (w.slice(-1) === 'T') return w.slice(0, -1) * 1000
+        else return w.slice(0, -1) * 0.001
     }
-    return ans;
+    return arr.sort((a, b) => sorted(a) - sorted(b))
 }
 
-console.log(solution(207))
+console.log(arrange(["200T", "300T", "150T", "100T"]))
+
