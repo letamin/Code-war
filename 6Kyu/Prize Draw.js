@@ -1,3 +1,7 @@
+/* 
+https://www.codewars.com/kata/5616868c81a0f281e500005c/javascript
+*/
+
 function rank(st, we, n) {
     let scores = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     let temp = st.split(",");
@@ -30,5 +34,3 @@ function rank(st, we, n) {
         else return ('' + a.name).localeCompare(b.name);
     })[n - 1].name;
 }
-
-console.log(rank("Emma,Emily,Willaim,William,Elijah,Abigail,Mia,Samantha,Aiden,Grace,Jacob,Olivai,Alexander,Matthew,Lagon,James,Natalie,David,Ava,Daniel,Michael", [6, 5, 3, 6, 1, 3, 2, 3, 3, 4, 3, 6, 1, 6, 2, 1, 6, 2, 4, 3, 6], 16));
